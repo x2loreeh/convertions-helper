@@ -1,0 +1,16 @@
+{
+  "name": "convertions-helper",
+  "version": "1.0.0",
+  "description": "A blazing fast helper for converting data",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x2loreeh/convertions-helper.git"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
