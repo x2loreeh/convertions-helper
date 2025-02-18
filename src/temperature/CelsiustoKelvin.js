@@ -1,4 +1,4 @@
-function celsiustoKelvin(celsius) {
+function celsiusToKelvin(celsius) {
     return (celsius + 273.15)
 }
 
@@ -7,6 +7,6 @@ function kelvinToCelsius(kelvin) {
 }
 
 module.exports = {
-    celsiustoKelvin,
+    celsiusToKelvin,
     kelvinToCelsius
 };
