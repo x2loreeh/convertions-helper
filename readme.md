@@ -32,3 +32,14 @@ For using Convertions Helper you will need the following requirements:
 - Byte to Bit (and viceversa)
 - Kilobyte to Bit (and viceversa)
 - KiloByte to Byte (and viceversa)
+
+
+### Example 
+
+``` 
+const { hourToMinute, minuteToHour } = require('../src/main');
+test('test1', () => {
+expect(hourToMinute(1))
+expect(minuteToHour(100))
+}); 
+```
