@@ -1,6 +1,6 @@
 {
   "name": "convertions-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A blazing fast helper for converting data",
   "main": "index.js",
   "scripts": {
