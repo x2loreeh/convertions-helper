@@ -29,3 +29,6 @@ For using Convertions Helper you will need the following requirements:
 - Day to Hour (and viceversa)
 - Day to Minute (and viceversa)
 - Day to Seconds (and viceversa)
+- Byte to Bit (and viceversa)
+- Kilobyte to Bit (and viceversa)
+- KiloByte to Byte (and viceversa)
