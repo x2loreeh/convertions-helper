@@ -27,3 +27,5 @@ For using Convertions Helper you will need the following requirements:
 - Minute to Second (and viceversa)
 - Hour to Second (and viceversa)
 - Day to Hour (and viceversa)
+- Day to Minute (and viceversa)
+- Day to Seconds (and viceversa)
