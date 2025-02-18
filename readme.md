@@ -24,3 +24,6 @@ For using Convertions Helper you will need the following requirements:
 - Celsius to Fahrenheit (and viceversa)
 - Celsius to Kelvin (and viceversa)
 - Hour to Minute (and viceversa)
+- Minute to Second (and viceversa)
+- Hour to Second (and viceversa)
+- Day to Hour (and viceversa)
