@@ -1,3 +1,5 @@
+// Time Convertions
+
 function minuteToSeconds(minute) {
     return (minute * 60)
 }
@@ -46,6 +48,7 @@ function hourToDay(hour) {
     return (hour / 24)
 }
 
+// Temperature Convertions
 
 function celsiusToKelvin(celsius) {
     return (celsius + 273.15)
@@ -63,6 +66,7 @@ function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32)  * 5/9
 }
 
+// Byte Convertions
 
 function byteToBit(byte) {
     return byte / 8
@@ -104,6 +108,13 @@ function kilobyteToMegabyte (kilobyte) {
     return kilobyte / 1000
 }
 
+function megabyteToBit (megabyte) {
+    return megabyte * 8000000
+}
+
+function bitToMegabyte (bit) {
+    return bit / 8000000
+}
 
 
 module.exports = {
@@ -132,5 +143,7 @@ module.exports = {
     celsiusToFahrenheit,
     celsiusToKelvin,
     hourToDay,
-    minuteToDay
+    minuteToDay,
+    megabyteToBit,
+    bitToMegabyte
 }
