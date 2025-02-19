@@ -20,6 +20,10 @@ For using Convertions Helper you will need the following requirements:
 - A terminal and the "jest" package if you want to have also the timings
 
 
+## Usage
+For now Convertions Helper is not avaiable/working on npmjs, so the only method to make it running is downloading this repository and importing in in your project, like i wrote in [Example](#Example)
+
+
 ## Avaviable Convertions
 - Celsius to Fahrenheit (and viceversa)
 - Celsius to Kelvin (and viceversa)
@@ -32,6 +36,10 @@ For using Convertions Helper you will need the following requirements:
 - Byte to Bit (and viceversa)
 - Kilobyte to Bit (and viceversa)
 - KiloByte to Byte (and viceversa)
+- MegaByte to Bit (and viceversa)
+- MegaByte to Byte (and viceversa)
+- MegaByte to Kilobyte (and viceversa)
+
 
 
 ### Example 
