@@ -27,6 +27,7 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 ## Avaviable Convertions
 - Celsius to Fahrenheit (and viceversa)
 - Celsius to Kelvin (and viceversa)
+- Kelvin to Farenheit (and vicecersa)
 - Hour to Minute (and viceversa)
 - Minute to Second (and viceversa)
 - Hour to Second (and viceversa)
