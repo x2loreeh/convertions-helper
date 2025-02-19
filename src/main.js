@@ -66,6 +66,14 @@ function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32)  * 5/9
 }
 
+function fahrenheitToKelvin(farenheit) {
+    return fahrenheit + 255.9278
+}
+
+function kelvinToFahrenheit(kelvin) {
+    return kelvin - 255.9278
+}
+
 // Byte Convertions
 
 function byteToBit(byte) {
@@ -142,6 +150,8 @@ module.exports = {
     kelvinToCelsius,
     celsiusToFahrenheit,
     celsiusToKelvin,
+    fahrenheitToKelvin,
+    kelvinToFahrenheit,
     hourToDay,
     minuteToDay,
     megabyteToBit,
