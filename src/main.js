@@ -1,134 +1,143 @@
+function addEmojiConverter(value) {
+    return {
+        value: value,
+        addEmoji: function(emoji) {
+            return `${this.value} ${emoji}`;
+        }
+    };
+}
+
 // Time Convertions
 
+// Time Convertions
 function minuteToSeconds(minute) {
-    return (minute * 60)
+    return addEmojiConverter(minute * 60);
 }
 
 function secondToMinute(second) {
-    return (second / 60)
+    return addEmojiConverter(second / 60);
 }
 
-function hourtoSecond (hour) {
-    return (hour * 60) * 60
+function hourToSecond(hour) {
+    return addEmojiConverter(hour * 3600);
 }
 
-function secondToHour (second) {
-    return (second * 60) * 60
+function secondToHour(second) {
+    return addEmojiConverter(second / 3600);
 }
 
 function hourToMinute(hour) {
-    return (hour * 60)
+    return addEmojiConverter(hour * 60);
 }
 
 function minuteToHour(minute) {
-    return (minute / 60)
+    return addEmojiConverter(minute / 60);
 }
 
 function dayToSecond(days) {
-    return ((days * 24) * 60 ) * 60
+    return addEmojiConverter(days * 86400);
 }
 
 function secondToDay(seconds) {
-    return ((seconds / 60) / 60 ) / 24
+    return addEmojiConverter(seconds / 86400);
 }
 
 function daysToMinute(days) {
-    return (days * 24 ) * 60
+    return addEmojiConverter(days * 1440);
 }
 
 function minuteToDay(minutes) {
-    return (minutes * 60 ) * 24
+    return addEmojiConverter(minutes / 1440);
 }
 
 function dayToHour(day) {
-    return (day * 24)
+    return addEmojiConverter(day * 24);
 }
 
 function hourToDay(hour) {
-    return (hour / 24)
+    return addEmojiConverter(hour / 24);
 }
 
 // Temperature Convertions
-
 function celsiusToKelvin(celsius) {
-    return (celsius + 273.15)
+    return addEmojiConverter(celsius + 273.15);
 }
 
 function kelvinToCelsius(kelvin) {
-    return (kelvin - 273.15)
+    return addEmojiConverter(kelvin - 273.15);
 }
 
 function celsiusToFahrenheit(celsius) {
-    return (celsius * 9/5) + 32
+    return addEmojiConverter((celsius * 9/5) + 32);
 }
 
 function fahrenheitToCelsius(fahrenheit) {
-    return (fahrenheit - 32)  * 5/9
+    return addEmojiConverter((fahrenheit - 32) * 5/9);
 }
 
-function fahrenheitToKelvin(farenheit) {
-    return fahrenheit + 255.9278
+function fahrenheitToKelvin(fahrenheit) {
+    return addEmojiConverter((fahrenheit - 32) * 5/9 + 273.15);
 }
 
 function kelvinToFahrenheit(kelvin) {
-    return kelvin - 255.9278
+    return addEmojiConverter((kelvin - 273.15) * 9/5 + 32);
 }
 
 // Byte Convertions
-
 function byteToBit(byte) {
-    return byte / 8
+    return addEmojiConverter(byte * 8);
 }
 
 function bitToByte(bit) {
-    return bit * 8
+    return addEmojiConverter(bit / 8);
 }
 
 function kilobyteToBit(kilobyte) {
-    return kilobyte * 8000
+    return addEmojiConverter(kilobyte * 8000);
 }
 
-function bitToKilobyte (bit) {
-    return bit / 8000
+function bitToKilobyte(bit) {
+    return addEmojiConverter(bit / 8000);
 }
 
-function kilobyteToByte (kilobyte) {
-    return kilobyte * 1000
+function kilobyteToByte(kilobyte) {
+    return addEmojiConverter(kilobyte * 1000);
 }
 
-function byteToKilobyte (byte) {
-    return byte / 1000
+function byteToKilobyte(byte) {
+    return addEmojiConverter(byte / 1000);
 }
 
 function megabyteToByte(megabyte) {
-    return megabyte * 1000000
+    return addEmojiConverter(megabyte * 1000000);
 }
 
 function byteToMegabyte(byte) {
-    return byte / 1000000
+    return addEmojiConverter(byte / 1000000);
 }
 
-function megabyteToKiloByte (megabyte) {
-    return megabyte * 1000
+function megabyteToKiloByte(megabyte) {
+    return addEmojiConverter(megabyte * 1000);
 }
 
-function kilobyteToMegabyte (kilobyte) {
-    return kilobyte / 1000
+function kilobyteToMegabyte(kilobyte) {
+    return addEmojiConverter(kilobyte / 1000);
 }
 
-function megabyteToBit (megabyte) {
-    return megabyte * 8000000
+function megabyteToBit(megabyte) {
+    return addEmojiConverter(megabyte * 8000000);
 }
 
-function bitToMegabyte (bit) {
-    return bit / 8000000
+function bitToMegabyte(bit) {
+    return addEmojiConverter(bit / 8000000);
 }
+
 
 
 module.exports = {
     minuteToSeconds,
     secondToMinute,
-    hourtoSecond,
+    hourToSecond,
     dayToSecond,
     secondToDay,
     secondToHour,

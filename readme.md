@@ -41,14 +41,17 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 - MegaByte to Byte (and viceversa)
 - MegaByte to Kilobyte (and viceversa)
 
-
+### Other Features
+- You can also add an emoji to your convertions to make them cooler using the function ```.addEmoji(emoji)```
 
 ### Example 
 
 ``` 
-const { hourToMinute, minuteToHour } = require('../src/main');
+const convertions = require('../src/main');
+
 test('test1', () => {
-expect(hourToMinute(1))
-expect(minuteToHour(100))
-}); 
+    console.log(convertions.minuteToSeconds(5).addEmoji("⏳"));
+    console.log(convertions.kilobyteToByte(3).addEmoji("💾"));
+    console.log(convertions.celsiusToFahrenheit(0).addEmoji("🔥"));
+});
 ```
