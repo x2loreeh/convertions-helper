@@ -43,6 +43,8 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 
 ### Other Features
 - You can also add an emoji to your convertions to make them cooler using the function ```.addEmoji(emoji)```
+- You can save your convertions in a txt (or text) file using ```.saveConvertions()```, and the output will look like this: 
+![txttest](/images/txt.png)
 
 ### Example 
 
@@ -50,8 +52,8 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 const convertions = require('../src/main');
 
 test('test1', () => {
-    console.log(convertions.minuteToSeconds(5).addEmoji("⏳"));
-    console.log(convertions.kilobyteToByte(3).addEmoji("💾"));
-    console.log(convertions.celsiusToFahrenheit(0).addEmoji("🔥"));
+    console.log(convertions.minuteToSeconds(5).addEmoji("⏳").saveConversions());
+    console.log(convertions.kilobyteToByte(3).addEmoji("💾").saveConversions());
+    console.log(convertions.celsiusToFahrenheit(0).addEmoji("🔥").saveConversions());
 });
 ```
