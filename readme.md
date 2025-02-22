@@ -72,8 +72,16 @@ my-project/
 const convertions = require('../src/main');
 
 test('test1', () => {
-    console.log(convertions.minuteToSeconds(5).addEmoji("⏳").saveConversions());
-    console.log(convertions.kilobyteToByte(3).addEmoji("💾").saveConversions());
-    console.log(convertions.celsiusToFahrenheit(0).addEmoji("🔥").saveConversions());
+convertions.celsiusToFahrenheit(20)
+  .addEmoji('🔥')
+  .saveConversions('json');
+
+convertions.kilobyteToBit(1)
+  .addEmoji('💻')
+  .saveConversions('txt');
+
+convertions.megabyteToKilobyte(5)
+  .addEmoji('📦')
+  .saveConversions('yml');
 });
 ```
