@@ -53,6 +53,21 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 
 ### Example 
 
+
+Before trying to convert data using the example below, your project structure would look like this:
+```
+my-project/
+│
+├── src/
+│   └── main.js      // Main.js need to be here
+│          
+├── testing/
+│   └── test.js      // Test files needs to be in a different folder
+│
+├── package.json     
+└── node_modules/
+```
+
 ``` 
 const convertions = require('../src/main');
 
