@@ -15,10 +15,37 @@ class Conversion {
 
     async saveConversions(format) {
       const fileName = `conversions.${format}`;
-      const data = `${this.input} >> ${this.output} ${this.emoji}\n`;
+      const dataObject = { initial: this.input,result: this.output, emoji: this.emoji };
 
       try {
-        await fs.appendFile(fileName, data);
+        if (format === 'txt') {
+          const datatxt = `${this.input} >> ${this.output} ${this.emoji} \n`;
+          const data = `${this.initial} ${this.result} ${this.emoji}\n`;
+          await fs.appendFile(fileName, datatxt);
+        } else if (format === 'json') {
+          let jsonData = [];
+          try {
+            const fileContent = await fs.readFile(fileName, 'utf8');
+            jsonData = JSON.parse(fileContent);
+          } catch (err) {
+            if (err.code !== 'ENOENT') throw err;
+          }
+          jsonData.push(dataObject);
+          await fs.writeFile(fileName, JSON.stringify(jsonData, null, 2));
+        } else if (format === 'yml' || format === 'yaml') {
+          let yamlData = [];
+          try {
+            const fileContent = await fs.readFile(fileName, 'utf8');
+            yamlData = yaml.load(fileContent) || [];
+          } catch (err) {
+            if (err.code !== 'ENOENT') throw err;
+          }
+          yamlData.push(dataObject);
+          await fs.writeFile(fileName, yaml.dump(yamlData));
+        } else {
+          console.error('Formato non supportato.');
+          return;
+        }
       } catch (err) {
         console.error(`Errore nel salvataggio: ${err.message}`);
       }
