@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const yaml = require('js-yaml');
 
 class Conversion {
@@ -13,44 +13,16 @@ class Conversion {
         return this;
     }
 
-saveConversions(format = 'json') {
-    const conversionData = [{ input: this.input, output: this.output + ' ' + this.emoji }];
-    const timestamp = new Date().toISOString();
-    const filename = `conversion_test`;
-  
-    switch (format) {
-      case 'txt':
-        this.saveAsText(conversionData, filename);
-        break;
-      case 'json':
-        this.saveAsJson(conversionData, filename);
-        break;
-      case 'yml':
-        this.saveAsYml(conversionData, filename);
-        break;
-      default:
-        console.error('Formato non supportato!');
+    async saveConversions(format) {
+      const fileName = `conversions.${format}`;
+      const data = `${this.input} >> ${this.output} ${this.emoji}\n`;
+
+      try {
+        await fs.appendFile(fileName, data);
+      } catch (err) {
+        console.error(`Errore nel salvataggio: ${err.message}`);
+      }
     }
-    return this;
-  }
-
-  saveAsText(conversionData, filename) {
-    const data = conversionData.map(conversion => `${conversion.input} ${conversion.output}`).join('\n');
-    fs.writeFileSync(`${filename}.txt`, data, 'utf8');
-    console.log(`Salvato come ${filename}.txt`);
-  }
-  
-  saveAsJson(conversionData, filename) {
-    fs.writeFileSync(`${filename}.json`, JSON.stringify(conversionData, null, 2), 'utf8');
-    console.log(`Salvato come ${filename}.json`);
-  }
-  
-  saveAsYml(conversionData, filename) {
-    const data = yaml.dump(conversionData);
-    fs.writeFileSync(`${filename}.yml`, data, 'utf8');
-    console.log(`Salvato come ${filename}.yml`);
-  }
-
 }
 // Funzioni di conversione
 
