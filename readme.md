@@ -48,8 +48,12 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 
 ### Other Features
 - You can also add an emoji to your convertions to make them cooler using the function ```.addEmoji(emoji)```
-- You can save your convertions in a txt (or text) file using ```.saveConvertions()```, and the output will look like this: 
-![txttest](/images/txt.png)
+- You can save your convertions in a txt (or text) file using ```.saveConvertions()```
+  - #### Avaiable formats
+    - Text File (.txt)
+    - JSON File (.json)
+    - YAML File (.yml)
+- You can compare now two convertions using ```compareConvertions(conv1, conv2)``` and see which is the bigger one
 
 ### Example 
 
