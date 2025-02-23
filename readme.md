@@ -54,6 +54,11 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
     - JSON File (.json)
     - YAML File (.yml)
 - You can compare now two convertions using ```compareConvertions(conv1, conv2)``` and see which is the bigger one
+- You can convert the items in a array using ```convertMultiples(convertion, values)```, following the example below
+  ```
+  const results = convertMultiple(hourToMinute, [1, 2, 3, 4]);
+  console.log(results.map(r => r.value));
+  ```
 
 ### Example 
 

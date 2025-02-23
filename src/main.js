@@ -58,6 +58,11 @@ function compareConvertions(conv1, conv2) {
   return conv1.value > conv2.value ? "The first conversion is greater than the second" : "The second conversion is greater than the first";
 }
 
+// Conversione di multipli
+function convertMultiple(conversionFunction, values) {
+  return values.map(value => conversionFunction(value));
+}
+
 // Celsius to Fahrenheit and vice versa
 function celsiusToFahrenheit(celsius) {
   const output = (celsius * 9/5) + 32;
