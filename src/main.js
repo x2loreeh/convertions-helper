@@ -63,6 +63,11 @@ function convertMultiple(conversionFunction, values) {
   return values.map(value => conversionFunction(value));
 }
 
+// Notazione Scientifica
+function toScientificNotation(value) {
+  return value.toExponential(2);
+}
+
 // Celsius to Fahrenheit and vice versa
 function celsiusToFahrenheit(celsius) {
   const output = (celsius * 9/5) + 32;
