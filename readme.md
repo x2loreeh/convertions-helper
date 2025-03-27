@@ -1,6 +1,12 @@
 # Convertions Helper
 A blazing fast utility for converting data 
 
+![badge1](https://img.shields.io/github/stars/x2loreeh/convertions-helper?style=flat)
+![badge2](https://img.shields.io/github/contributors/x2loreeh/convertions-helper)
+![badge3](https://img.shields.io/github/license/x2loreeh/convertions-helper)
+![badge4](https://img.shields.io/github/forks/x2loreeh/convertions-helper?style=flat)
+
+
 ## Why should you switch to Convertions Helper?
 You should switch to Convertions Helper because it is simple and fast!  Instead of using ```console.log(num + num)``` you can simply use a function like ```celsiusToFahrenheit(num)``` and it will automatically convert this into your selected measure.  Also it is a little bit faster tha the normal console.log() 
 
