@@ -198,6 +198,21 @@ function kilobyteToMegabyte(kilobytes) {
   return new Conversion(`${kilobytes} kilobytes`, `${output} megabytes`);
 }
 
+// Developer Convertions (tools you may need)
+function stringToBase64(text) {
+  if (typeof text !== 'string') {
+    throw new Error('Invalid input: expected a string');
+  }
+  return Buffer.from(text).toString('base64');
+}
+
+function base64ToString(base64) {
+  if (typeof base64 !== 'string') {
+    throw new Error('Invalid input: expected a Base64 string');
+  }
+  return Buffer.from(base64, 'base64').toString('utf-8');
+}
+
 module.exports = {
   celsiusToFahrenheit,
   fahrenheitToCelsius,
@@ -229,4 +244,7 @@ module.exports = {
   byteToMegabyte,
   megabyteToKilobyte,
   kilobyteToMegabyte,
+  stringToBase64,
+  base64ToString,
+
 };
