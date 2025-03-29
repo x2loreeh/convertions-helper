@@ -101,3 +101,7 @@ convertions.megabyteToKilobyte(5)
   .saveConversions('yml');
 });
 ```
+
+
+## CONTRIBUTING
+Feel Free to clone the repository via Git or GitHub Desktop.  If you want to contribute, just open a pull request with your code in a different branch, I would really appreciate that!
