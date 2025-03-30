@@ -54,6 +54,8 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 - ✔️ String to Base64 (and viceversa)
 - ✔️ String to Hex (and viceversa)
 - ✔️ String to Byte (and viceversa)
+- ✔️ Kilograms to Ounces (and viceversa)
+- ✔️ Kilograms to Pounds (and viceversa)
 
 ### Other Features
 - You can also add an emoji to your convertions to make them cooler using the function ```.addEmoji(emoji)```

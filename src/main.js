@@ -148,6 +148,35 @@ function secondToDay(seconds) {
   return new Conversion(`${seconds} seconds`, `${output} days`);
 }
 
+// Weight conversions
+function kgToPounds(kg) {
+  if (typeof kg !== 'number' || isNaN(kg)) {
+    throw new Error('Invalid input: expected a number');
+  }
+  return kg * 2.20462;
+}
+
+function poundsToKg(pounds) {
+  if (typeof pounds !== 'number' || isNaN(pounds)) {
+    throw new Error('Invalid input: expected a number');
+  }
+  return pounds / 2.20462;
+}
+
+function kgToOunces(kg) {
+  if (typeof kg !== 'number' || isNaN(kg)) {
+    throw new Error('Invalid input: expected a number');
+  }
+  return kg * 35.274;
+}
+
+function ouncesToKg(ounces) {
+  if (typeof ounces !== 'number' || isNaN(ounces)) {
+    throw new Error('Invalid input: expected a number');
+  }
+  return ounces / 35.274;
+}
+
 // Data storage conversions
 function byteToBit(bytes) {
   const output = bytes * 8;
@@ -278,5 +307,9 @@ module.exports = {
   hexToString,
   stringToBytes,
   bytesToString,
+  kgToOunces,
+  kgToPounds,
+  ouncesToKg,
+  poundsToKg,
 
 };
