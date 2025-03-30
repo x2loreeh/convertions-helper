@@ -227,6 +227,20 @@ function hexToString(hex) {
   return Buffer.from(hex, 'hex').toString('utf-8');
 }
 
+function stringToBytes(text) {
+  if (typeof text !== 'string') {
+    throw new Error('Invalid input: expected a string');
+  }
+  return new Uint8Array(Buffer.from(text));
+}
+
+function bytesToString(bytes) {
+  if (!(bytes instanceof Uint8Array)) {
+    throw new Error('Invalid input: expected a Uint8Array');
+  }
+  return Buffer.from(bytes).toString('utf-8');
+}
+
 module.exports = {
   celsiusToFahrenheit,
   fahrenheitToCelsius,
@@ -262,5 +276,7 @@ module.exports = {
   base64ToString,
   stringToHex,
   hexToString,
+  stringToBytes,
+  bytesToString,
 
 };
