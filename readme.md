@@ -52,6 +52,7 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
 - ✔️ Bit to Kilobyte (and viceversa)
 - ✔️ Bit to Megabyte (and viceversa)
 - ✔️ String to Base64 (and viceversa)
+- ✔️ String to Hex (and viceversa)
 
 ### Other Features
 - You can also add an emoji to your convertions to make them cooler using the function ```.addEmoji(emoji)```
