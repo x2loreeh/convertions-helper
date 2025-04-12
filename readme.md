@@ -65,6 +65,11 @@ For now Convertions Helper is not avaiable/working on npmjs, so the only method 
     - JSON File (.json)
     - YAML File (.yml)
 - You can compare now two convertions using ```compareConvertions(conv1, conv2)``` and see which is the bigger one
+- You can transform big numbers into scientific notation using ```toScientificNotation(num)```, like the example below
+  ```
+  console.log(convertions.toScientificNotation(1000000000))
+  ( Result: 1.00e+9 )
+  ```
 - You can convert the items in a array using ```convertMultiples(convertion, values)```, following the example below
   ```
   const results = convertMultiple(hourToMinute, [1, 2, 3, 4]);
