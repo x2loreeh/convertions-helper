@@ -312,4 +312,6 @@ module.exports = {
   ouncesToKg,
   poundsToKg,
 
+  toScientificNotation
+
 };
